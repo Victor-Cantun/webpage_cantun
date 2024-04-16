@@ -94,6 +94,10 @@ html.dark #logo {
 .dark .hamburger .line {
   background-color: var(--them1-background);
 }
+main {
+  padding: 2rem;
+  /*   background-color: aquamarine; */
+}
 
 /*Main Style*/
 .MainContent {

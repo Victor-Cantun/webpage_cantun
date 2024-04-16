@@ -3,6 +3,7 @@ import '../styles/style.css'
 import '../styles/style_slide.css'
 import Header from '../components/Header.astro'
 import Main from '../components/Main.astro'
+import Slider from '../components/Slider.astro'
 const {pageTitle} = Astro.props;
 ---
 <html lang="es">
@@ -16,6 +17,7 @@ const {pageTitle} = Astro.props;
 	<body>
 		<Header></Header>
 		<Main></Main>
+		<Slider></Slider>
         <slot/>
     </body>
 </html>
