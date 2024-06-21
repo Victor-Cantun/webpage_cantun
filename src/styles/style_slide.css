@@ -1,5 +1,6 @@
 .main_sec_services {
   width: 100%;
+  padding: 2rem 0px;
   /*   position: absolute; */
   /*   background-color: blue; */
   display: flex;
@@ -20,17 +21,18 @@
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: start;
 }
 .slider-container:hover .slider {
   animation-play-state: paused;
 }
 .slider {
   display: flex;
-  white-space: nowrap;
+  /*   white-space: nowrap; */
   animation: slide 15s linear infinite;
   -webkit-animation: slide 15s linear infinite;
-  /*   background-color: purple;
-  border: 3px solid;
+  /*   background-color: purple;*/
+  /*   border: 3px solid;
   border-color: pink; */
 }
 .slider .img-slide {

@@ -1,8 +1,23 @@
 ---
 ---
-<div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">Nosotros</a>
-    <a href="/services/">Servicios</a>
-    <a href="/blog/">Blog</a>
-</div>
+<nav class="nav-links">
+    <ul>
+        <li><a href="#home" class="active">Inicio</a></li>
+        <li><a href="#about" >Nosotros</a></li>
+        <li><a href="#services" >Servicios</a></li>
+        <li><a href="#galery" >Contacto</a></li>
+    </ul>
+</nav>
+<script>
+    let navlinks = document.querySelectorAll('.nav-links a');
+    navlinks.forEach(nav => {
+        nav.addEventListener("click",()=>{
+            /* alert('hiciste click') */
+            navlinks.forEach(a => {
+                a.classList.remove('active')
+            })
+            nav.classList.add('active');
+        })
+    })
+</script>
+<script src="../scripts/scroll_navbar.js"></script>
