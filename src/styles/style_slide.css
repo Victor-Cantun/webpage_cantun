@@ -1,23 +1,5 @@
-.main_sec_services {
-  width: 100%;
-  padding: 2rem 0px;
-  /*   position: absolute; */
-  /*   background-color: blue; */
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  flex-direction: row;
-  overflow-x: hidden;
-}
 .slider-container {
   width: 100vw;
-  /* background-color: rgb(207, 214, 17); */
-  /* border: 3px solid;
-  border-color: red; */
-  /*  overflow-x: hidden; */
-  /*   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; */
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
@@ -27,50 +9,35 @@
   animation-play-state: paused;
 }
 .slider {
-  display: flex;
-  /*   white-space: nowrap; */
+  display: inline-flex;
+  /* border-right: 1px solid red; */
+  /*  white-space: nowrap; */
   animation: slide 15s linear infinite;
   -webkit-animation: slide 15s linear infinite;
-  /*   background-color: purple;*/
-  /*   border: 3px solid;
-  border-color: pink; */
 }
-.slider .img-slide {
-  width: 350px;
+.img-slide {
+  width: 200px;
   height: 100px;
-  /* object-fit: cover; */
-  /*   padding: 0px 50px; */
+  padding: 5px;
+  /* margin: 2px 2px 2px 0px; */
+  /* border-radius: 10%; */
+  /* background-color: gainsboro; */
+  /*   -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%; */
+  /* opacity: 0.9; */
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 
-.slider img {
+.img-slide > img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
 
-/* .slider::before,
-.slider::after {
-  height: 100px;
-  width: 200px;
-  position: absolute;
-  content: "";
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 2;
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
-}
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-} */
 @keyframes slide {
   from {
     transform: translateX(0);
