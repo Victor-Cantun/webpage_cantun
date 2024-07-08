@@ -19,16 +19,29 @@
   width: 200px;
   height: 100px;
   padding: 5px;
-  /* margin: 2px 2px 2px 0px; */
-  /* border-radius: 10%; */
-  /* background-color: gainsboro; */
-  /*   -webkit-border-radius: 10%;
+  /*margin: 2px 2px 2px 0px;
+  */ /*border-radius: 10%;
+  */ /*background-color: gainsboro;
+  */ /*-webkit-border-radius: 10%;
   -moz-border-radius: 10%;
   -ms-border-radius: 10%;
-  -o-border-radius: 10%; */
-  /* opacity: 0.9; */
+  -o-border-radius: 10%;
+  */ /*opacity: 0.9;
+  */
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+}
+.img-slide:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+.invertir {
+  filter: invert(50%);
+  -webkit-filter: invert(50%);
+}
+.invertir:hover {
+  filter: invert(0);
+  -webkit-filter: invert(0);
 }
 
 .img-slide > img {
@@ -36,6 +49,7 @@
   height: 100%;
   aspect-ratio: 3/2;
   object-fit: contain;
+  mix-blend-mode: color-burn;
 }
 
 @keyframes slide {
