@@ -28,8 +28,9 @@
   -o-border-radius: 10%;
   */ /*opacity: 0.9;
   */
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
+  /* filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); */
+  filter: brightness(0%);
 }
 .img-slide:hover {
   filter: grayscale(0);
