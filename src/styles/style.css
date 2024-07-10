@@ -387,6 +387,7 @@ html.dark #logo {
   cursor: pointer;
   text-transform: uppercase;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  text-decoration: none;
 }
 /* Grow */
 .hvr-grow {
@@ -766,22 +767,32 @@ html.dark #logo {
     display: flex;
     flex-direction: column;
   }
+  .nav-links ul li {
+    height: 50px;
+    padding-left: 30px;
+    /*     background-color: yellow; */
+    text-align: start;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+  }
   .expanded {
+    padding-top: 10px;
     display: block;
     position: absolute;
     top: 100%;
     left: 0%;
-    transform: translateX(-40%);
-    width: 80vw;
+    transform: translateX(-70%);
+    width: 50vw;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
     z-index: 10;
     background-color: var(--color-2);
-    -webkit-transform: translateX(-40%);
-    -moz-transform: translateX(-40%);
-    -ms-transform: translateX(-40%);
-    -o-transform: translateX(-40%);
+    -webkit-transform: translateX(-70%);
+    -moz-transform: translateX(-70%);
+    -ms-transform: translateX(-70%);
+    -o-transform: translateX(-70%);
   }
   .hamburger {
     display: flex;

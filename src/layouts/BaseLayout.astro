@@ -21,15 +21,20 @@ const {pageTitle} = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="icon" type="image/png" sizes="16x16"  href="/favicon.png">
+		<meta name="msapplication-TileColor" content="#0172a3">
+		<meta name="theme-color" content="#0172a3">
 		<title>{pageTitle}</title>
 		<script src="/src/scripts/scrollreveal.js"></script>
 	</head>
 	<body>
 		<Header></Header>
-		<Home></Home>
-		<Services></Services>
-		<About></About>
-		<Footer></Footer>
+		<main>
+			<Home></Home>
+			<Services></Services>
+			<About></About>
+			<Footer></Footer>
+		</main>
         <slot/>
     </body>
 <!-- 	<script>
