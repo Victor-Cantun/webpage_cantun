@@ -1,9 +1,12 @@
 footer {
   position: relative;
   width: 100vw;
-  height: 500px;
+  height: 40vh;
   overflow: hidden;
 }
+/* .footer_content {
+  position: absolute;
+} */
 .background {
   width: 50vw;
 }

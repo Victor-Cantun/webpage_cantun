@@ -52,11 +52,11 @@ html.sr .widget {
   justify-content: end;
 }
 #home,
-#about,
-#services {
+#services #about {
   width: 100vw;
   height: 100dvh;
-  margin: 0 auto;
+  margin: 2% auto;
+  padding: 2%;
 }
 .logo img {
   width: 150px;
@@ -171,6 +171,7 @@ html.sr .widget {
   -moz-transform: translateY(0px) rotate(45deg);
   -ms-transform: translateY(0px) rotate(45deg);
   -o-transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125s;
 }
 .hamburger span:nth-child(2) {
   transform: translateY(15px);
@@ -188,6 +189,7 @@ html.sr .widget {
   -moz-transform: translateY(0px) rotate(315deg);
   -ms-transform: translateY(0px) rotate(315deg);
   -o-transform: translateY(0px) rotate(315deg);
+  transition-delay: 0.25s;
 }
 .hamburger.active span:nth-child(3) {
   transform: translateX(60px);
@@ -477,31 +479,29 @@ html.dark #logo {
 .hvr-shutter-in-horizontal:active .icon-phone {
   fill: var(--color-5);
 }
-
-#about {
-  padding: 5% 0;
-}
 .about_content {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   gap: 0.5rem;
-  justify-content: space-around;
-  margin-top: 3%;
+  /*   background-color: greenyellow; */
 }
 .about_left {
   width: 45%;
-  min-width: 500px;
-  padding: 1rem;
+  min-width: 300px;
+  padding: 2%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 }
 .about_right {
-  width: 45%;
-  min-width: 500px;
+  width: 95%;
+  min-width: 300px;
+  max-width: 450px;
   margin: 0;
   padding: 1rem;
   display: flex;
@@ -595,22 +595,21 @@ html.dark #logo {
   -ms-transform: scale(1);
   -o-transform: scale(1);
 }
-#services {
-  padding: 5% 0;
-}
 .services_content {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   gap: 0.5rem;
-  margin: 4% 0;
+  position: relative;
 }
 
 .card {
-  width: 45%;
-  min-width: 350px;
+  width: 95%;
+  min-width: 300px;
+  max-width: 600px;
   border-left: 5px solid var(--color-5);
   border-radius: 0px 15px 15px 0px;
   -webkit-border-radius: 0px 15px 15px 0px;
@@ -766,27 +765,52 @@ html.dark #logo {
   .nav-links {
     display: none;
   }
-  .text-2 {
-    font-size: 6em;
-  }
-  .home_content {
-    padding: 20% 2% 0% 3%;
-    display: grid;
-    grid-template:
-      "home-text-1 home-text-1" 50px
-      "home-text-2 home-text-2" 80px
-      "home-text-3 home-text-3" 50px
-      "home-btn home-btn" auto
-      "home-services home-slider" 100px / 1fr 1fr;
-  }
   .hamburger {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .home-figure > figure {
+  .text-2 {
+    font-size: 6em;
+  }
+  #home {
+    padding: 20% 2% 0% 3%;
+  }
+  #services,
+  #about {
+    padding: 10% 0%;
+    margin: 0%;
+    height: unset;
+  }
+  .home_content {
+    display: grid;
+    grid-template:
+      "home-text-1 " 50px
+      "home-text-2" 80px
+      "home-text-3" 50px
+      "home-btn" auto
+      "home-figure" auto
+      "home-slider" 100px;
+    height: 100dvh;
+  }
+  .home-slider {
+    grid-area: home-slider;
+    position: relative;
+  }
+  .home-slider-card {
     position: absolute;
-    top: 0px;
+    bottom: 0%;
+    left: 0%;
+  }
+  .home-figure > figure,
+  .about_left {
+    display: none;
+  }
+  .card .title_card h3 {
+    font-size: 1.7em;
+  }
+  .card .text_card {
+    font-size: 1.2em;
   }
 }
 
