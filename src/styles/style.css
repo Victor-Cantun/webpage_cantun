@@ -22,7 +22,7 @@ body {
   --color-3: #f0faff;
   --color-4: #0172a3;
   --color-5: #0bb1ec;
-  --color-6: #07324a;
+  --color-6: #082534;
 }
 html.sr .widget {
   visibility: hidden;
@@ -30,7 +30,7 @@ html.sr .widget {
 .header {
   background-color: var(--color-2);
   width: 100vw;
-  height: 90px;
+  height: 60px;
   display: flex;
   justify-content: space-evenly;
   padding: 0.5rem 5%;
@@ -50,13 +50,11 @@ html.sr .widget {
   flex-grow: 2;
   display: flex;
   justify-content: end;
+  position: relative;
 }
-#home,
-#services #about {
+#home {
   width: 100vw;
   height: 100dvh;
-  margin: 2% auto;
-  padding: 2%;
 }
 .logo img {
   width: 150px;
@@ -118,18 +116,7 @@ html.sr .widget {
   -o-transform: scaleX(1);
   transform-origin: left;
 }
-.expanded {
-  display: unset;
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  width: 80vw;
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  z-index: 10;
-  background-color: var(--color-2);
-}
+
 .hamburger {
   cursor: pointer;
   position: relative;
@@ -252,7 +239,6 @@ html.dark #logo {
   grid-area: home-btn;
   align-self: center;
   justify-self: center;
-  /*   background-color: yellow; */
 }
 .home-slider {
   grid-area: home-slider;
@@ -343,7 +329,7 @@ html.dark #logo {
   -webkit-animation: typing 2s steps(14), cursor.4s step-end infinite alternate;
 }
 .text-2 {
-  color: var(--color-5);
+  color: var(--color-4);
   text-transform: uppercase;
   font-size: clamp(0.5em, 4vw + 4em, 20em);
   font-size: 15em;
@@ -400,6 +386,7 @@ html.dark #logo {
   -o-border-radius: 25px;
   cursor: pointer;
   text-transform: uppercase;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 /* Grow */
 .hvr-grow {
@@ -721,22 +708,32 @@ html.dark #logo {
 }
 /*Desktop*/
 @media (width>=1367px) {
+  #services,
+  #about {
+    margin: 2% 0% 2% 0%;
+    padding: 2% 0% 2% 0%;
+  }
   .home_content {
+    padding: 6% 0% 0% 0%;
     grid-template:
       "home-text-1 home-text-1" 65px
       "home-text-2 home-text-2" 200px
       "home-text-3 home-text-3" 65px
-      "home-btn home-figure"
+      "home-btn home-figure" auto
       "home-slider home-slider" 100px / 1fr 1fr;
   }
 }
 /*Notebook*/
 @media (1024px<= width <=1366px) {
+  #home,
+  #services,
+  #about {
+    padding: 10% 0% 0% 0%;
+  }
   .text-2 {
     font-size: 12em;
   }
   .home_content {
-    padding: 9% 0% 0% 0%;
     grid-template:
       "home-text-1 home-text-1" 65px
       "home-text-2 home-text-2" 200px
@@ -764,6 +761,27 @@ html.dark #logo {
 @media (320px <= width <= 767px) {
   .nav-links {
     display: none;
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .expanded {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    transform: translateX(-40%);
+    width: 80vw;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    background-color: var(--color-2);
+    -webkit-transform: translateX(-40%);
+    -moz-transform: translateX(-40%);
+    -ms-transform: translateX(-40%);
+    -o-transform: translateX(-40%);
   }
   .hamburger {
     display: flex;
