@@ -1,15 +1,16 @@
 footer {
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 .footer_content {
   display: flex;
   width: 100%;
   height: 500px;
+  /*   background-color: aqua; */
 }
 .background {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -28,13 +29,15 @@ footer {
   align-items: center;
   gap: 30px;
   width: 100%;
+  /*   background-color: yellow; */
 }
 .social_content {
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /*   background-color: yellow; */
 }
 .socials,
 .footer-links,
@@ -44,10 +47,11 @@ footer {
   padding: 0;
   margin: 0;
   color: white;
+  z-index: 3;
 }
 
 .socials {
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .socials a {
@@ -56,17 +60,34 @@ footer {
 
 .footer-links {
   gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-links li {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .footer-links a {
+  z-index: 3;
   text-decoration: none;
   font-size: 20px;
   color: white;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  /*   background-color: green; */
 }
 
 .footer-legal {
   font-size: 12px;
+  height: 100%;
   margin: 0;
+  padding: 15px;
+  /*   background-color: red; */
 }
 
 #svg-wave {

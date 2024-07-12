@@ -28,7 +28,7 @@ html.sr .widget {
   visibility: hidden;
 }
 .header {
-  background-color: var(--color-2);
+  background-color: var(--color-6);
   width: 100vw;
   height: 60px;
   display: flex;
@@ -59,6 +59,8 @@ html.sr .widget {
 .logo img {
   width: 150px;
   height: 50px;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 .nav-links > ul {
   list-style-type: none;
@@ -80,7 +82,7 @@ html.sr .widget {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--color-1);
+  color: var(--color-2);
   position: relative;
 }
 .nav-links ul li > a::after {
@@ -91,7 +93,7 @@ html.sr .widget {
   width: 100%;
   height: 4px;
   border-radius: 5px;
-  background-color: var(--color-4);
+  background-color: var(--color-5);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -130,7 +132,7 @@ html.sr .widget {
   width: 40px;
   height: 4px;
   margin-bottom: 10px;
-  background-color: var(--color-1);
+  background-color: var(--color-2);
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -190,6 +192,7 @@ html.sr .widget {
   cursor: pointer;
   display: flex;
   align-items: center;
+  fill: var(--color-2);
 }
 html.dark,
 html.dark #header,
@@ -251,7 +254,7 @@ html.dark #logo {
   display: flex;
   align-items: center;
 }
-.home-slider .home-slider-card:before {
+/* .home-slider .home-slider-card:before {
   content: "";
   background-color: var(--color-4);
   position: absolute;
@@ -259,12 +262,6 @@ html.dark #logo {
   height: 100%;
   top: 0%;
   right: 0%;
-  /*   background: linear-gradient(to right, #04b0ee, transparent);
-  animation: toright 5s linear infinite;
-  -webkit-animation: toright 5s linear infinite; */
-  /*background-image: conic-gradient(#04b0ee 20deg, transparent 120deg);
-  animation: rotate 20s linear infinite;
-  -webkit-animation: toright 20s linear infinite;*/
   z-index: 1;
 }
 .home-slider .home-slider-card:after {
@@ -276,7 +273,7 @@ html.dark #logo {
   width: 10%;
   height: 100%;
   z-index: 2;
-}
+} */
 @keyframes rotate {
   100% {
     transform: rotate(-360deg);
@@ -758,19 +755,12 @@ html.dark #logo {
   padding: 20px;
   border-radius: 20px;
   position: relative;
-  background-color: #1a1a1a;
-  color: #fff;
-  border: 1px solid #333;
+  /*   background-color: var(--color-1);
+  color: var(--color-1); */
+  /* border: 1px solid #333; */
 }
 
 .title {
-  /*   font-size: 28px;
-  font-weight: 600;
- 
-  
-
- 
-  color: #00bfff; */
   position: relative;
   padding-left: 30px;
   letter-spacing: -1px;
@@ -797,13 +787,16 @@ html.dark #logo {
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: #00bfff;
+  background-color: var(--color-5);
 }
 
 .message,
 .signin {
   font-size: 14.5px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-1);
+}
+.dark .message {
+  color: var(--color-2);
 }
 
 .signin {
@@ -811,11 +804,11 @@ html.dark #logo {
 }
 
 .signin a:hover {
-  text-decoration: underline royalblue;
+  text-decoration: underline var(--color-6);
 }
 
 .signin a {
-  color: #00bfff;
+  color: var(--color-5);
 }
 
 .flex {
@@ -839,7 +832,7 @@ html.dark #logo {
 }
 
 .form label .input + span {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-5);
   position: absolute;
   left: 10px;
   top: 0px;
@@ -855,7 +848,7 @@ html.dark #logo {
 
 .form label .input:focus + span,
 .form label .input:valid + span {
-  color: #00bfff;
+  color: var(--color-5);
   top: 0px;
   font-size: 0.7em;
   font-weight: 600;
@@ -873,11 +866,11 @@ html.dark #logo {
   color: #fff;
   font-size: 16px;
   transform: 0.3s ease;
-  background-color: #00bfff;
+  background-color: var(--color-4);
 }
 
 .submit:hover {
-  background-color: #00bfff96;
+  background-color: var(--color-5);
 }
 
 @keyframes pulse {
@@ -949,7 +942,16 @@ html.dark #logo {
 /*phone*/
 @media (320px <= width <= 767px) {
   .nav-links {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 100%;
+    left: -50%;
+    width: 0vw;
+    transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
   }
   .nav-links ul {
     display: flex;
@@ -958,29 +960,26 @@ html.dark #logo {
   .nav-links ul li {
     height: 50px;
     padding-left: 30px;
-    /*     background-color: yellow; */
     text-align: start;
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
     align-items: center;
   }
+  .dark .nav-links ul li {
+    border: 1px solid white;
+  }
   .expanded {
-    padding-top: 10px;
+    padding-top: 0px;
     display: block;
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 0%;
-    transform: translateX(-70%);
     width: 50vw;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 5px 0px white;
+    -moz-box-shadow: 5px 5px 5px 0px white;
+    box-shadow: 5px 5px 5px 0px white;
     z-index: 10;
-    background-color: var(--color-2);
-    -webkit-transform: translateX(-70%);
-    -moz-transform: translateX(-70%);
-    -ms-transform: translateX(-70%);
-    -o-transform: translateX(-70%);
+    background-color: var(--color-6);
   }
   .hamburger {
     display: flex;
