@@ -5,6 +5,14 @@
   padding: 0px;
   margin: 0px;
 }
+:root {
+  --color-1: black;
+  --color-2: white;
+  --color-3: #ebf0f6;
+  --color-4: #0172a3;
+  --color-5: #0bb1ec;
+  --color-6: #082534;
+}
 html {
   font-family: sans-serif;
   overflow-x: hidden;
@@ -15,15 +23,9 @@ html {
 body {
   overflow-x: hidden;
   margin: 0;
+  background-color: var(--color-3);
 }
-:root {
-  --color-1: black;
-  --color-2: white;
-  --color-3: #f0faff;
-  --color-4: #0172a3;
-  --color-5: #0bb1ec;
-  --color-6: #082534;
-}
+
 html.sr .widget {
   visibility: hidden;
 }
@@ -221,7 +223,8 @@ html.dark #logo {
 }
 .home-text-1 {
   grid-area: home-text-1;
-  padding: 0% 5%;
+  padding: 4% 5%;
+  margin-left: 7%;
   align-self: center;
   justify-self: start;
 }
@@ -233,14 +236,15 @@ html.dark #logo {
   border-bottom: 5px solid var(--color-4);
 }
 .home-text-3 {
-  padding: 0% 5%;
   grid-area: home-text-3;
+  padding: 4% 5%;
+  margin-left: 7%;
   align-self: center;
   justify-self: start;
 }
 .home-btn {
   grid-area: home-btn;
-  align-self: center;
+  /* align-self: center; */
   justify-self: center;
 }
 .home-slider {
@@ -297,7 +301,7 @@ html.dark #logo {
   /* background-color: purple; */
   position: relative;
 }
-.home-figure figure {
+.home-figure > figure {
   position: absolute;
   top: -110px;
   left: -200px;
@@ -725,9 +729,9 @@ html.dark #logo {
   gap: 0.5rem;
 }
 .contact_left {
-  width: 45%;
+  width: 49%;
   min-width: 300px;
-  max-width: 450px;
+  /* max-width: 450px; */
   padding: 2%;
   display: flex;
   justify-content: center;
@@ -735,10 +739,10 @@ html.dark #logo {
   align-items: start;
 }
 .contact_right {
-  width: 45%;
-  height: 50%;
+  width: 50%;
+  height: 500px;
   min-width: 300px;
-  max-width: 450px;
+  /* max-width: 450px; */
   margin: 0;
   padding: 2%;
   display: flex;
@@ -746,6 +750,7 @@ html.dark #logo {
   justify-content: center;
   gap: 0.5rem;
   color: var(--color-1);
+  background-color: #0172a3;
 }
 .form {
   display: flex;
@@ -896,11 +901,10 @@ html.dark #logo {
   .home_content {
     padding: 6% 0% 0% 0%;
     grid-template:
-      "home-text-1 home-text-1" 65px
+      "home-text-1 home-text-1" 70px
       "home-text-2 home-text-2" 200px
-      "home-text-3 home-text-3" 65px
-      "home-btn home-figure" auto
-      "home-slider home-slider" 100px / 1fr 1fr;
+      "home-text-3 home-text-3" 70px
+      "home-btn home-figure" auto / 1fr 1fr;
   }
 }
 /*Notebook*/
@@ -920,8 +924,7 @@ html.dark #logo {
       "home-text-1 home-text-1" 65px
       "home-text-2 home-text-2" 200px
       "home-text-3 home-text-3" 65px
-      "home-btn home-figure"
-      "home-slider home-slider" 100px / 1fr 1fr;
+      "home-btn home-figure" auto / 1fr 1fr;
   }
 }
 /*Tablet*/
@@ -935,12 +938,21 @@ html.dark #logo {
       "home-text-1 home-text-1" 65px
       "home-text-2 home-text-2" 200px
       "home-text-3 home-text-3" 65px
-      "home-btn home-figure"
-      "home-slider home-slider" 100px / 1fr 1fr;
+      "home-btn home-figure" auto / 1fr 1fr;
   }
 }
 /*phone*/
 @media (320px <= width <= 767px) {
+  .home_content {
+    display: grid;
+    grid-template:
+      "home-text-1 " 50px
+      "home-text-2" 80px
+      "home-text-3" 50px
+      "home-btn" 70px
+      "home-figure" auto;
+    height: 100dvh;
+  }
   .nav-links {
     display: block;
     position: fixed;
@@ -998,18 +1010,8 @@ html.dark #logo {
     margin: 0%;
     height: unset;
   }
-  .home_content {
-    display: grid;
-    grid-template:
-      "home-text-1 " 50px
-      "home-text-2" 80px
-      "home-text-3" 50px
-      "home-btn" auto
-      "home-figure" auto
-      "home-slider" 100px;
-    height: 100dvh;
-  }
-  .home-slider {
+
+  /*   .home-slider {
     grid-area: home-slider;
     position: relative;
   }
@@ -1017,8 +1019,22 @@ html.dark #logo {
     position: absolute;
     bottom: 0%;
     left: 0%;
+  } */
+  .home-figure {
+    display: flex;
+    justify-content: center;
+    padding: 10px 4px;
   }
-  .home-figure > figure,
+  .home-figure > figure {
+    width: 300px;
+    height: 200px;
+    position: unset;
+    top: unset;
+    left: unset;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+  }
   .about_left {
     display: none;
   }
