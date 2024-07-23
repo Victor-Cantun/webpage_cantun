@@ -197,8 +197,8 @@ html.sr .widget {
   fill: var(--color-2);
 }
 html.dark,
-html.dark #header,
-html.dark .nav-links {
+html.dark .nav-links,
+.dark body {
   background-color: var(--color-1);
   color: var(--color-2);
 }
@@ -211,15 +211,16 @@ html.dark #logo {
 .dark .card::before {
   color: var(--color-2);
 }
-.dark .img-slide {
+/* .dark .img-slide {
   filter: brightness(0) invert(1);
-}
+} */
 .dark .hamburger .line {
   background-color: var(--color-2);
 }
 .home_content {
   padding: 7% 0% 0% 0%;
   display: grid;
+  position: relative;
 }
 .home-text-1 {
   grid-area: home-text-1;
@@ -953,10 +954,30 @@ html.dark #logo {
       "home-figure" auto;
     height: 100dvh;
   }
+  .home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: var(--color-6);
+    clip-path: polygon(0 0, 100% 0%, 100% 30%, 0% 70%);
+  }
+  .home::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: var(--color-6);
+    clip-path: polygon(100% 0, 50% 100%, 100% 100%);
+  }
   .nav-links {
     display: block;
     position: fixed;
-    top: 100%;
+    top: 0%;
     left: -50%;
     width: 0vw;
     transition: all 1.5s;
@@ -984,7 +1005,7 @@ html.dark #logo {
     padding-top: 0px;
     display: block;
     position: fixed;
-    top: 100%;
+    top: 0%;
     left: 0%;
     width: 50vw;
     -webkit-box-shadow: 5px 5px 5px 0px white;
@@ -1011,15 +1032,6 @@ html.dark #logo {
     height: unset;
   }
 
-  /*   .home-slider {
-    grid-area: home-slider;
-    position: relative;
-  }
-  .home-slider-card {
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-  } */
   .home-figure {
     display: flex;
     justify-content: center;
@@ -1033,7 +1045,7 @@ html.dark #logo {
     left: unset;
     display: flex;
     justify-content: center;
-    background-color: yellow;
+    /* background-color: yellow; */
   }
   .about_left {
     display: none;
