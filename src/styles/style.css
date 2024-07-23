@@ -197,10 +197,12 @@ html.sr .widget {
   fill: var(--color-2);
 }
 html.dark,
-html.dark .nav-links,
 .dark body {
   background-color: var(--color-1);
   color: var(--color-2);
+}
+.dark .nav-links {
+  background-color: var(--color-6);
 }
 html.dark #logo {
   filter: invert(100%);
@@ -333,6 +335,7 @@ html.dark #logo {
 .text-2 {
   color: var(--color-4);
   text-transform: uppercase;
+  /* font-size: clamp(0.5em, 4vw + 4em, 20em); */
   font-size: clamp(0.5em, 4vw + 4em, 20em);
   font-size: 15em;
   font-family: "Archivo Black", sans-serif;
@@ -944,6 +947,9 @@ html.dark #logo {
 }
 /*phone*/
 @media (320px <= width <= 767px) {
+  .home {
+    margin-top: 5%;
+  }
   .home_content {
     display: grid;
     grid-template:
@@ -1019,8 +1025,12 @@ html.dark #logo {
     justify-content: center;
     align-items: center;
   }
+  .text-1,
+  .text-3 {
+    font-size: 2em;
+  }
   .text-2 {
-    font-size: 6em;
+    font-size: 4em;
   }
   #home {
     padding: 20% 2% 0% 3%;
