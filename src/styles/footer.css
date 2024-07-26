@@ -1,20 +1,21 @@
 footer {
   position: relative;
   z-index: 1;
+  height: 400px;
 }
 .footer_content {
-  display: flex;
   width: 100%;
-  height: 500px;
-  /*   background-color: aqua; */
+  height: 150%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .background {
   position: absolute;
-  z-index: 1;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0px;
+  left: 0;
 }
 
 #socials {
@@ -29,15 +30,12 @@ footer {
   align-items: center;
   gap: 30px;
   width: 100%;
-  /*   background-color: yellow; */
 }
 .social_content {
-  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /*   background-color: yellow; */
 }
 .socials,
 .footer-links,
@@ -48,10 +46,6 @@ footer {
   margin: 0;
   color: white;
   z-index: 3;
-}
-
-.socials {
-  /* gap: 20px; */
 }
 
 .socials a {
@@ -79,7 +73,6 @@ footer {
   cursor: pointer;
   width: 100%;
   padding: 10px;
-  /*   background-color: green; */
 }
 
 .footer-legal {
@@ -87,7 +80,6 @@ footer {
   height: 100%;
   margin: 0;
   padding: 15px;
-  /*   background-color: red; */
 }
 
 #svg-wave {
