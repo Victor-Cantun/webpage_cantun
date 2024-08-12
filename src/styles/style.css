@@ -33,7 +33,7 @@ html.sr .widget {
 .header {
   background-color: var(--color-6);
   width: 100vw;
-  height: 10dvh;
+  height: 8dvh;
   display: flex;
   justify-content: space-evenly;
   padding: 0.5rem 4%;
@@ -917,7 +917,7 @@ html.dark #logo {
      margin-top: 5%;
   } */
   .home_content {
-    margin-top: 15%;
+    margin-top: 13%;
     display: grid;
     grid-template:
       "home-text-1 " 50px
@@ -955,7 +955,7 @@ html.dark #logo {
   .nav-links {
     display: block;
     position: fixed;
-    top: 10%;
+    top: 8%;
     left: -50%;
     width: 0vw;
     transition: all 1.5s;
