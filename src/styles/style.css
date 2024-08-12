@@ -948,7 +948,7 @@ html.dark #logo {
     clip-path: polygon(0 90%, 100% 70%, 100% 100%, 0 100%);
   }
   .header {
-    padding: 0.5rem 2px;
+    padding: 1rem 2px 0px 2px;
     margin: 0 auto;
   }
 
