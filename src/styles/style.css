@@ -913,10 +913,11 @@ html.dark #logo {
 }
 /*phone*/
 @media (320px <= width <= 767px) {
-  .home {
-    margin-top: 5%;
-  }
+  /*   .home {
+     margin-top: 5%;
+  } */
   .home_content {
+    margin-top: 20%;
     display: grid;
     grid-template:
       "home-text-1 " 50px
@@ -932,9 +933,11 @@ html.dark #logo {
     top: 0;
     left: 0;
     width: 100%;
-    height: 30%;
+    height: 100%;
     background-color: var(--color-6);
-    clip-path: polygon(0 0, 100% 0%, 100% 30%, 0% 70%);
+    /* clip-path: polygon(0 0, 100% 0%, 100% 30%, 0% 70%); */
+    /* clip-path: polygon(0 0, 100% 0, 100% 10%, 0 30%); */
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 30%);
   }
   .home::after {
     content: "";
@@ -942,9 +945,10 @@ html.dark #logo {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10%;
+    height: 100%;
     background-color: var(--color-6);
-    clip-path: polygon(100% 0, 50% 100%, 100% 100%);
+    /* clip-path: polygon(100% 0, 50% 100%, 100% 100%); */
+    clip-path: polygon(0 90%, 100% 70%, 100% 100%, 0 100%);
   }
   .header {
     padding: 0.5rem 2px;
